@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_text">Здравствуйте!</string>
+    <string name="checkbox_text">Я чекбокс</string>
+    <string name="button_text">Я кнопка</string>
+    <string name="button_toast_text">Я ничего не делаю</string>
+</resources>

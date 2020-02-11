@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_text">私はボタンです</string>
+    <string name="checkbox_text">私はチェックボックスです</string>
+    <string name="hello_text">こんにちは！</string>
+    <string name="button_toast_text">私は何もしません</string>
+</resources>
