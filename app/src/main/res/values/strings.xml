@@ -4,7 +4,10 @@
     <string name="checkbox_text">I\'m a checkbox</string>
     <string name="button_text">I\'m a button</string>
     <string name="select_language_label" translatable="false">Select your language</string>
-    <string name="apply_button" translatable="false">Apply</string>
+    <string name="apply_button">Apply</string>
+    <string name="apply_button_english_only" translatable="false">Apply</string>
+    <string name="button_toast_text">I do nothing</string>
+    <string name="select_color_label">Select theme color</string>
 
     <string-array name="languages">
         <item>English</item>
@@ -16,5 +19,11 @@
         <item>ja</item>
         <item>ru</item>
     </string-array>
-    <string name="button_toast_text">I do nothing</string>
+
+    <string-array name="colors">
+        <item>Black</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Red</item>
+    </string-array>
 </resources>

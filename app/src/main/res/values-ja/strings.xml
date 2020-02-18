@@ -4,4 +4,13 @@
     <string name="checkbox_text">私はチェックボックスです</string>
     <string name="hello_text">こんにちは！</string>
     <string name="button_toast_text">私は何もしません</string>
+    <string name="apply_button">適用</string>
+    <string name="select_color_label">テーマの色を選んでください</string>
+
+    <string-array name="colors">
+        <item>黒い</item>
+        <item>緑</item>
+        <item>青い</item>
+        <item>赤い</item>
+    </string-array>
 </resources>

@@ -4,4 +4,13 @@
     <string name="checkbox_text">Я чекбокс</string>
     <string name="button_text">Я кнопка</string>
     <string name="button_toast_text">Я ничего не делаю</string>
+    <string name="apply_button">Применить</string>
+    <string name="select_color_label">Выберите цвет темы</string>
+
+    <string-array name="colors">
+        <item>Чёрный</item>
+        <item>Зеленый</item>
+        <item>Синий</item>
+        <item>Красный</item>
+    </string-array>
 </resources>
