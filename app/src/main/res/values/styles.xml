@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.MarginsMedium">
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="AppTheme.MarginsLarge">
+        <item name="android:layout_margin">15dp</item>
+    </style>
+
 </resources>

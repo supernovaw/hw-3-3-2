@@ -4,7 +4,10 @@
     <string name="checkbox_text">I\'m a checkbox</string>
     <string name="button_text">I\'m a button</string>
     <string name="select_language_label" translatable="false">Select your language</string>
-    <string name="apply_button" translatable="false">Apply</string>
+    <string name="apply_button">Apply</string>
+    <string name="apply_button_english_only" translatable="false">Apply</string>
+    <string name="button_toast_text">I do nothing</string>
+    <string name="select_margins_label">Select margins</string>
 
     <string-array name="languages">
         <item>English</item>
@@ -16,5 +19,9 @@
         <item>ja</item>
         <item>ru</item>
     </string-array>
-    <string name="button_toast_text">I do nothing</string>
+    <string-array name="margin_sizes">
+        <item>Default</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
 </resources>

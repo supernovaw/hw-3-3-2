@@ -20,8 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
 	private CheckBox checkBoxExample;
 	private Button exampleButton;
+
 	private Spinner languagesSpinner;
-	private Button applyButton;
+	private Button applyLanguageButton;
+
+	private Spinner marginSizesSpinner;
+	private Button applyMarginSizesButton;
 
 	private SharedPreferences sharedPref;
 	private int currentLanguageIndex;
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ThemeSwitcher.applyTheme(this);
 		setContentView(R.layout.activity_main);
 		initViews();
 		sharedPref = getPreferences(MODE_PRIVATE);
@@ -50,16 +55,24 @@ public class MainActivity extends AppCompatActivity {
 				android.R.layout.simple_spinner_dropdown_item,
 				getResources().getStringArray(R.array.languages));
 		languagesSpinner.setAdapter(languagesAdapter);
-		languagesSpinner.setSelection(currentLanguageIndex, true);
+		languagesSpinner.setSelection(currentLanguageIndex);
+		applyLanguageButton.setOnClickListener(v -> applyLanguage());
 
-		applyButton.setOnClickListener(v -> apply());
+		ArrayAdapter<String> marginSizesAdapter = new ArrayAdapter<>(this,
+				android.R.layout.simple_spinner_dropdown_item,
+				getResources().getStringArray(R.array.margin_sizes));
+		marginSizesSpinner.setAdapter(marginSizesAdapter);
+		marginSizesSpinner.setSelection(ThemeSwitcher.getSelectedMargins());
+		applyMarginSizesButton.setOnClickListener(v -> applyMarginSizes());
 	}
 
 	private void initViews() {
 		checkBoxExample = findViewById(R.id.checkBoxExample);
 		exampleButton = findViewById(R.id.exampleButton);
 		languagesSpinner = findViewById(R.id.languagesSpinner);
-		applyButton = findViewById(R.id.applyButton);
+		applyLanguageButton = findViewById(R.id.applyLanguageButton);
+		marginSizesSpinner = findViewById(R.id.marginSizesSpinner);
+		applyMarginSizesButton = findViewById(R.id.applyMarginSizesButton);
 	}
 
 	private int getSystemLanguageIndex() {
@@ -74,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 		return result == -1 ? 0 : result; // if not found, set to 0
 	}
 
-	private void apply() {
+	private void applyLanguage() {
 		int pos = languagesSpinner.getSelectedItemPosition();
 		if (pos == currentLanguageIndex)
 			return;
@@ -88,5 +101,9 @@ public class MainActivity extends AppCompatActivity {
 
 		startActivity(new Intent(this, MainActivity.class));
 		finish();
+	}
+
+	private void applyMarginSizes() {
+		ThemeSwitcher.changeThemeMargins(this, marginSizesSpinner.getSelectedItemPosition());
 	}
 }

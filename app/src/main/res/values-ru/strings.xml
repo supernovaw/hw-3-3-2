@@ -4,4 +4,12 @@
     <string name="checkbox_text">Я чекбокс</string>
     <string name="button_text">Я кнопка</string>
     <string name="button_toast_text">Я ничего не делаю</string>
+    <string name="select_margins_label">Выберите отступы</string>
+    <string name="apply_button">Применить</string>
+
+    <string-array name="margin_sizes">
+        <item>Сдандартные</item>
+        <item>Средние</item>
+        <item>Большие</item>
+    </string-array>
 </resources>
